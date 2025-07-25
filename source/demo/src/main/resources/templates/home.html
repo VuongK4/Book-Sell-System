@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <title>Bookly</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>
+        Bookly
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <style>
@@ -19,78 +22,6 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        /* === NEW SLIDE ANIMATION STYLES === */
-        .hero-slide-image {
-            position: absolute;
-            right: 1.5rem; /* 6 */
-            top: 50%;
-            transform: translateY(-50%);
-            max-height: 22rem;
-            max-width: 20rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-            object-fit: cover;
-            transition: opacity 0.7s ease-in-out;
-        }
-        @media (min-width: 768px) {
-            .hero-slide-image {
-                right: 4rem; /* 16 */
-                max-height: 26rem;
-                max-width: 20rem;
-            }
-        }
-        .slide-out-left {
-            animation: slideOutLeft 0.7s forwards;
-        }
-        .slide-in-right {
-            animation: slideInRight 0.7s forwards;
-        }
-        .slide-out-right {
-            animation: slideOutRight 0.7s forwards;
-        }
-        .slide-in-left {
-            animation: slideInLeft 0.7s forwards;
-        }
-        @keyframes slideOutLeft {
-            from {
-                transform: translateX(0) translateY(-50%);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(-100%) translateY(-50%);
-                opacity: 0;
-            }
-        }
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%) translateY(-50%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0) translateY(-50%);
-                opacity: 1;
-            }
-        }
-        @keyframes slideOutRight {
-            from {
-                transform: translateX(0) translateY(-50%);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%) translateY(-50%);
-                opacity: 0;
-            }
-        }
-        @keyframes slideInLeft {
-            from {
-                transform: translateX(-100%) translateY(-50%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0) translateY(-50%);
-                opacity: 1;
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -101,50 +32,101 @@
             Bookly
         </a>
         <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
-            <a class="hover:text-red-600 transition-colors duration-300" href="#">Home</a>
-            <a class="hover:text-red-600 transition-colors duration-300" href="#">About</a>
-            <a class="hover:text-red-600 transition-colors duration-300" href="#">Shop</a>
-            <a class="hover:text-red-600 transition-colors duration-300" href="#">Blogs</a>
+            <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                Home
+            </a>
+            <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                About
+            </a>
+            <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                Shop
+            </a>
+            <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                Blogs
+            </a>
             <div class="relative group">
                 <button aria-expanded="false" aria-haspopup="true" class="hover:text-red-600 transition-colors duration-300 flex items-center space-x-1 focus:outline-none">
-                    <span>Pages</span>
-                    <i class="fas fa-chevron-down text-xs"></i>
+       <span>
+        Pages
+       </span>
+                    <i class="fas fa-chevron-down text-xs">
+                    </i>
                 </button>
                 <div class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300">
-                    <a class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-md" href="#">Subpage 1</a>
-                    <a class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-md" href="#">Subpage 2</a>
+                    <a class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-md" href="#">
+                        Subpage 1
+                    </a>
+                    <a class="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-600 rounded-md" href="#">
+                        Subpage 2
+                    </a>
                 </div>
             </div>
-            <a class="hover:text-red-600 transition-colors duration-300" href="#">Contact</a>
-            <a class="hover:text-red-600 transition-colors duration-300 font-semibold border border-red-600 rounded-md px-3 py-1 hover:bg-red-600 hover:text-white transition-colors duration-300" href="#">Get Pro</a>
+            <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                Contact
+            </a>
+            <a class="hover:text-red-600 transition-colors duration-300 font-semibold border border-red-600 rounded-md px-3 py-1 hover:bg-red-600 hover:text-white transition-colors duration-300" href="#">
+                Get Pro
+            </a>
         </nav>
         <div class="flex items-center space-x-5 text-gray-600 text-xl md:text-2xl">
-            <a aria-label="Search" class="hover:text-red-600 transition-colors duration-300" href="#"><i class="fas fa-search"></i></a>
-            <a aria-label="User Account" class="hover:text-red-600 transition-colors duration-300" href="#"><i class="fas fa-user"></i></a>
-            <a aria-label="Wishlist" class="hover:text-red-600 transition-colors duration-300" href="#"><i class="fas fa-heart"></i></a>
-            <a aria-label="Shopping Cart" class="hover:text-red-600 transition-colors duration-300" href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a aria-label="Search" class="hover:text-red-600 transition-colors duration-300" href="#">
+                <i class="fas fa-search">
+                </i>
+            </a>
+            <a aria-label="User Account" class="hover:text-red-600 transition-colors duration-300" href="#">
+                <i class="fas fa-user">
+                </i>
+            </a>
+            <a aria-label="Wishlist" class="hover:text-red-600 transition-colors duration-300" href="#">
+                <i class="fas fa-heart">
+                </i>
+            </a>
+            <a aria-label="Shopping Cart" class="hover:text-red-600 transition-colors duration-300" href="#">
+                <i class="fas fa-shopping-cart">
+                </i>
+            </a>
         </div>
+        <!-- Mobile menu button -->
         <button aria-label="Open menu" class="md:hidden text-gray-700 focus:outline-none ml-4" id="mobile-menu-button">
-            <i class="fas fa-bars text-2xl"></i>
+            <i class="fas fa-bars text-2xl">
+            </i>
         </button>
     </div>
+    <!-- Mobile menu -->
     <nav class="hidden md:hidden bg-white border-t border-gray-200" id="mobile-menu">
-        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">Home</a>
-        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">About</a>
-        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">Shop</a>
-        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">Blogs</a>
+        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">
+            Home
+        </a>
+        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">
+            About
+        </a>
+        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">
+            Shop
+        </a>
+        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">
+            Blogs
+        </a>
         <div class="border-b border-gray-200">
             <button class="w-full flex justify-between items-center px-6 py-3 font-semibold hover:bg-red-50 hover:text-red-600 focus:outline-none" id="mobile-submenu-button">
                 Pages
-                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-down">
+                </i>
             </button>
             <div class="hidden flex-col bg-red-50" id="mobile-submenu">
-                <a class="block px-8 py-2 text-red-700 hover:bg-red-100 font-medium" href="#">Subpage 1</a>
-                <a class="block px-8 py-2 text-red-700 hover:bg-red-100 font-medium" href="#">Subpage 2</a>
+                <a class="block px-8 py-2 text-red-700 hover:bg-red-100 font-medium" href="#">
+                    Subpage 1
+                </a>
+                <a class="block px-8 py-2 text-red-700 hover:bg-red-100 font-medium" href="#">
+                    Subpage 2
+                </a>
             </div>
         </div>
-        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">Contact</a>
-        <a class="block px-6 py-3 hover:bg-red-600 hover:text-white font-semibold text-center border border-red-600 rounded-md mx-4 my-3" href="#">Get Pro</a>
+        <a class="block px-6 py-3 border-b border-gray-200 hover:bg-red-50 hover:text-red-600 font-semibold" href="#">
+            Contact
+        </a>
+        <a class="block px-6 py-3 hover:bg-red-600 hover:text-white font-semibold text-center border border-red-600 rounded-md mx-4 my-3" href="#">
+            Get Pro
+        </a>
     </nav>
 </header>
 <!-- Hero Section -->
@@ -156,12 +138,12 @@
         <p class="text-lg md:text-xl text-gray-700 mb-6 font-medium drop-shadow-sm">
             Best Offer Save 30%. Grab it now!
         </p>
-        <a id="hero-shop-button" href="#" class="bg-red-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-red-700 transition-colors duration-300 inline-block">
+        <button class="bg-red-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-red-700 transition-colors duration-300">
             Shop Collection
-        </a>
+        </button>
     </div>
     <img alt="Fine Print Book cover with elegant typography and soft pastel background"
-         class="hero-slide-image"
+         class="absolute right-6 md:right-16 top-1/2 transform -translate-y-1/2 rounded-lg shadow-lg max-h-[22rem] md:max-h-[26rem] object-cover"
          height="400" loading="lazy" width="320"
          th:src="${initiaHeroProducts != null ? initiaHeroProducts.imageUrl : 'https://storage.googleapis.com/a1aa/image/6967d3c5-ab07-49c7-2f18-0b4afab4b8e0.jpg'}"
          th:alt="${initiaHeroProducts != null ? initiaHeroProducts.name : 'Fine Print Book cover with elegant typography and soft pastel background'}"
@@ -169,11 +151,13 @@
     />
     <button aria-label="Previous" id="hero-prev"
             class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-red-600 rounded-full p-3 shadow-md transition">
-        <i class="fas fa-chevron-left text-xl md:text-2xl"></i>
+        <i class="fas fa-chevron-left text-xl md:text-2xl">
+        </i>
     </button>
     <button aria-label="Next" id="hero-next"
             class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-red-600 rounded-full p-3 shadow-md transition">
-        <i class="fas fa-chevron-right text-xl md:text-2xl"></i>
+        <i class="fas fa-chevron-right text-xl md:text-2xl">
+        </i>
     </button>
 </section>
 <!-- Products -->
@@ -183,19 +167,69 @@
             Products
         </h2>
     </div>
-    <div aria-label="Best selling books" class="flex space-x-6 overflow-x-auto scrollbar-hide pb-2" role="list" id="products-list">
+    <div aria-label="Best selling books" class="flex space-x-6 overflow-x-auto scrollbar-hide pb-2" role="list">
         <div th:each="product : ${products}" class="bg-white rounded-xl shadow-lg flex-shrink-0 w-48 md:w-56 p-5 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300" role="listitem">
             <img th:src="${product.getImageUrl()}" alt="Book cover of Psychology of Money with abstract golden coins and blue background" class="rounded-md mb-4 object-cover h-56 w-full" height="240" loading="lazy" width="180"/>
             <h3 th:text="${product.getName()}" class="text-lg font-semibold text-gray-900 mb-1"></h3>
             <p th:text="${product.getDescription()}" class="text-gray-500 mb-2"></p>
-            <a th:href="@{'/product/' + ${product.id}}" class="text-red-600 font-bold text-lg hover:underline mt-auto" th:text="'$' + ${product.getPrice()}"></a>
+            <p th:text="${product.getPrice()}" class="text-red-600 font-bold text-lg"></p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg flex-shrink-0 w-48 md:w-56 p-5 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300" role="listitem">
+            <img alt="Book cover of The Two Towers with medieval towers and fantasy background" class="rounded-md mb-4 object-cover h-56 w-full" height="240" loading="lazy" src="https://storage.googleapis.com/a1aa/image/cd7defce-3e1e-4efd-978f-d8db193a2b7c.jpg" width="180"/>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                The Two Towers
+            </h3>
+            <p class="text-gray-500 mb-2">
+                J.R.R. Tolkien
+            </p>
+            <p class="text-red-600 font-bold text-lg">
+                $70
+            </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg flex-shrink-0 w-48 md:w-56 p-5 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300" role="listitem">
+            <img alt="Book cover of Goal Planner with motivational typography and pastel colors" class="rounded-md mb-4 object-cover h-56 w-full" height="240" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6bc650a6-40d9-498b-0804-21b162c3f665.jpg" width="180"/>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                Goal Planner
+            </h3>
+            <p class="text-gray-500 mb-2">
+                Heavenly Bodies
+            </p>
+            <p class="text-red-600 font-bold text-lg">
+                $70
+            </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg flex-shrink-0 w-48 md:w-56 p-5 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300" role="listitem">
+            <img alt="Book cover of Stupore e Tremori with elegant minimalist design and warm tones" class="rounded-md mb-4 object-cover h-56 w-full" height="240" loading="lazy" src="https://storage.googleapis.com/a1aa/image/18b0c966-002a-4f24-9dcb-7b2fdf198a84.jpg" width="180"/>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                Stupore e Tremori
+            </h3>
+            <p class="text-gray-500 mb-2">
+                Amélie Nothomb
+            </p>
+            <p class="text-red-600 font-bold text-lg">
+                $70
+            </p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg flex-shrink-0 w-48 md:w-56 p-5 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300" role="listitem">
+            <img alt="Book cover of Diary of Anne Frank with vintage photo and classic typography" class="rounded-md mb-4 object-cover h-56 w-full" height="240" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ff40c213-52fc-4727-d3c0-0378f68a01b0.jpg" width="180"/>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                Diary of Anne Frank
+            </h3>
+            <p class="text-gray-500 mb-2">
+                My Dearest
+            </p>
+            <p class="text-red-600 font-bold text-lg">
+                $70
+            </p>
         </div>
     </div>
-    <button aria-label="Scroll left" id="products-scroll-left" class="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-md text-red-600 hover:bg-red-50 transition">
-        <i class="fas fa-chevron-left text-2xl"></i>
+    <button aria-label="Scroll left" class="hidden md:flex absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-md text-red-600 hover:bg-red-50 transition">
+        <i class="fas fa-chevron-left text-2xl">
+        </i>
     </button>
-    <button aria-label="Scroll right" id="products-scroll-right" class="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-md text-red-600 hover:bg-red-50 transition">
-        <i class="fas fa-chevron-right text-2xl"></i>
+    <button aria-label="Scroll right" class="hidden md:flex absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-md text-red-600 hover:bg-red-50 transition">
+        <i class="fas fa-chevron-right text-2xl">
+        </i>
     </button>
 </section>
 <!-- Featured, Latest, Best Reviewed, On Sale -->
@@ -206,13 +240,42 @@
             <h3 class="text-2xl font-extrabold mb-6 text-gray-900 border-b border-gray-200 pb-3">
                 Featured
             </h3>
-            <div th:each="product : ${featuredProducts}"
-                 class="space-y-8 flex-grow">
-                <div class="text-center border border-gray-300 border-[0.5px] rounded-lg p-4 shadow-sm space-y-2 mt-2">
-                    <img th:src="${product.getImageUrl()}" class="mx-auto rounded-md shadow-md mb-3 object-cover h-52 w-full max-w-[160px]" height="210" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6a4fa8c2-d669-4493-39a1-ea90c916bee9.jpg" width="160"/>
-                    <h4 th:text="${product.getName()}" class="text-lg font-semibold text-gray-900"></h4>
-                    <p th:text="${product.getDescription()}" class="text-gray-500 mb-1"></p>
-                    <p th:text="'$' + ${product.getPrice()}" class="text-red-600 font-bold text-lg"></p>
+            <div class="space-y-8 flex-grow">
+                <div class="text-center">
+                    <img alt="Book cover of Echoes of Ancients with ancient ruins and mystical blue hues" class="mx-auto rounded-md shadow-md mb-3 object-cover h-52 w-full max-w-[160px]" height="210" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6a4fa8c2-d669-4493-39a1-ea90c916bee9.jpg" width="160"/>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                        Echoes of Ancients
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Lauren Asher
+                    </p>
+                    <p class="text-red-600 font-bold text-lg">
+                        $70
+                    </p>
+                </div>
+                <div class="text-center">
+                    <img alt="Book cover of The Midnight Garden with moonlit garden and magical atmosphere" class="mx-auto rounded-md shadow-md mb-3 object-cover h-52 w-full max-w-[160px]" height="210" loading="lazy" src="https://storage.googleapis.com/a1aa/image/ca14413d-bd98-4f60-ab72-751ea5f338e6.jpg" width="160"/>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                        The Midnight Garden
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Lauren Asher
+                    </p>
+                    <p class="text-red-600 font-bold text-lg">
+                        $70
+                    </p>
+                </div>
+                <div class="text-center">
+                    <img alt="Book cover of Shadow of the Serpent with dark serpent silhouette and mysterious background" class="mx-auto rounded-md shadow-md mb-3 object-cover h-52 w-full max-w-[160px]" height="210" loading="lazy" src="https://storage.googleapis.com/a1aa/image/60c34f3a-34c8-41bf-db04-a42b907e690e.jpg" width="160"/>
+                    <h4 class="text-lg font-semibold text-gray-900">
+                        Shadow of the Serpent
+                    </h4>
+                    <p class="text-gray-500 mb-1">
+                        Lauren Asher
+                    </p>
+                    <p class="text-red-600 font-bold text-lg">
+                        $70
+                    </p>
                 </div>
             </div>
         </div>
@@ -362,19 +425,24 @@
             </p>
             <div class="flex space-x-5 mt-6 text-red-600 text-2xl">
                 <a aria-label="Facebook" class="hover:text-red-700 transition-colors duration-300" href="#">
-                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-facebook-f">
+                    </i>
                 </a>
                 <a aria-label="Instagram" class="hover:text-red-700 transition-colors duration-300" href="#">
-                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-instagram">
+                    </i>
                 </a>
                 <a aria-label="Twitter" class="hover:text-red-700 transition-colors duration-300" href="#">
-                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-twitter">
+                    </i>
                 </a>
                 <a aria-label="LinkedIn" class="hover:text-red-700 transition-colors duration-300" href="#">
-                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-linkedin-in">
+                    </i>
                 </a>
                 <a aria-label="Vimeo" class="hover:text-red-700 transition-colors duration-300" href="#">
-                    <i class="fab fa-vimeo-v"></i>
+                    <i class="fab fa-vimeo-v">
+                    </i>
                 </a>
             </div>
         </div>
@@ -383,11 +451,31 @@
                 Quick Links
             </h3>
             <ul class="space-y-3 text-gray-600 font-medium">
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Home</a></li>
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">About</a></li>
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Shop</a></li>
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Blogs</a></li>
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Contact</a></li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Shop
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Blogs
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Contact
+                    </a>
+                </li>
             </ul>
         </div>
         <div>
@@ -395,11 +483,31 @@
                 Help &amp; Info
             </h3>
             <ul class="space-y-3 text-gray-600 font-medium">
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Track Your Order</a></li>
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Returns Policies</a></li>
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Shipping + Delivery</a></li>
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Contact Us</a></li>
-                <li><a class="hover:text-red-600 transition-colors duration-300" href="#">Faqs</a></li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Track Your Order
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Returns Policies
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Shipping + Delivery
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Contact Us
+                    </a>
+                </li>
+                <li>
+                    <a class="hover:text-red-600 transition-colors duration-300" href="#">
+                        Faqs
+                    </a>
+                </li>
             </ul>
         </div>
         <div>
@@ -424,22 +532,17 @@
         © 2024 Bookly. All rights reserved.
     </div>
 </footer>
-<script th:inline="javascript">
-    /*<![CDATA[*/
+<script>
+    // Mobile menu toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileSubmenuButton = document.getElementById('mobile-submenu-button');
     const mobileSubmenu = document.getElementById('mobile-submenu');
+    const heroProducts = /*[[${productsForHeroCarousel}]]*/ []; // Lấy danh sách sản phẩm từ controller
     const heroShopButton = document.getElementById('hero-shop-button');
     const heroImageElement = document.getElementById('hero-image');
     const heroPrevBtn = document.getElementById('hero-prev');
     const heroNextBtn = document.getElementById('hero-next');
-    const productsList = document.getElementById('products-list');
-    const productsScrollLeftBtn = document.getElementById('products-scroll-left');
-    const productsScrollRightBtn = document.getElementById('products-scroll-right');
-
-    // Thymeleaf inline JS to inject hero products array from Spring Boot model
-    let heroProducts = /*[[${productsForHeroCarousel}]]*/ [];
 
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
@@ -447,97 +550,44 @@
 
     mobileSubmenuButton.addEventListener('click', () => {
         mobileSubmenu.classList.toggle('hidden');
-        const icon = mobileSubmenuButton.querySelector('i');
-        icon.classList.toggle('fa-chevron-down');
-        icon.classList.toggle('fa-chevron-up');
+        mobileSubmenuButton.querySelector('i').classList.toggle('fa-chevron-down');
+        mobileSubmenuButton.querySelector('i').classList.toggle('fa-chevron-up');
     });
 
     let currentHeroImageIndex = 0;
-    let isAnimating = false;
-
-    function removeAnimationClasses() {
-        heroImageElement.classList.remove('slide-out-left', 'slide-in-right', 'slide-out-right', 'slide-in-left');
-    }
-
-    function updateHeroImage(direction = 'next') {
-        if (!heroImageElement || isAnimating) return;
-        isAnimating = true;
-        const product = heroProducts[currentHeroImageIndex];
-        if (product) {
-            if (direction === 'next') {
-                heroImageElement.classList.add('slide-out-left');
-            } else {
-                heroImageElement.classList.add('slide-out-right');
-            }
-            heroImageElement.addEventListener('animationend', function handler() {
-                heroImageElement.removeEventListener('animationend', handler);
-                heroImageElement.src = product.imageUrl;
-                heroImageElement.alt = product.name;
-                removeAnimationClasses();
-                if (direction === 'next') {
-                    heroImageElement.classList.add('slide-in-right');
-                } else {
-                    heroImageElement.classList.add('slide-in-left');
-                }
-                heroImageElement.addEventListener('animationend', function handler2() {
-                    heroImageElement.removeEventListener('animationend', handler2);
-                    removeAnimationClasses();
-                    isAnimating = false;
-                });
-            }, { once: true });
-            if (heroShopButton) {
-                heroShopButton.href = /*[[@{/product/}]]*/ '' + product.id;
-            }
-        }
-    }
 
     if (heroProducts && heroProducts.length > 0) {
-        heroImageElement.src = heroProducts[0].imageUrl;
-        heroImageElement.alt = heroProducts[0].name;
-        if (heroShopButton) {
-            heroShopButton.href = /*[[@{/product/}]]*/ '' + heroProducts[0].id;
+        function updateHeroImage() {
+            const product = heroProducts[currentHeroImageIndex];
+            if (product) {
+                if (heroImageElement) {
+                    heroImageElement.src = product.imageUrl;
+                    heroImageElement.alt = product.name;
+                }
+                if (heroShopButton) {
+                    heroShopButton.href = `/product/${product.id}`;
+                }
+            }
         }
 
-        heroPrevBtn.addEventListener('click', () => {
-            currentHeroImageIndex = (currentHeroImageIndex - 1 + heroProducts.length) % heroProducts.length;
-            updateHeroImage('prev');
-            resetAutoSlide();
-        });
+        if (heroPrevBtn) {
+            heroPrevBtn.addEventListener('click', () => {
+                currentHeroImageIndex = (currentHeroImageIndex - 1 + heroProducts.length) % heroProducts.length;
+                updateHeroImage();
+            });
+        }
 
-        heroNextBtn.addEventListener('click', () => {
-            currentHeroImageIndex = (currentHeroImageIndex + 1) % heroProducts.length;
-            updateHeroImage('next');
-            resetAutoSlide();
-        });
-
-        let autoSlideInterval = setInterval(() => {
-            currentHeroImageIndex = (currentHeroImageIndex + 1) % heroProducts.length;
-            updateHeroImage('next');
-        }, 6000);
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(() => {
+        if (heroNextBtn) {
+            heroNextBtn.addEventListener('click', () => {
                 currentHeroImageIndex = (currentHeroImageIndex + 1) % heroProducts.length;
-                updateHeroImage('next');
-            }, 6000);
+                updateHeroImage();
+            });
         }
+
     } else {
+        // Nếu không có sản phẩm nào, ẩn các nút điều hướng của Hero Section Image Carousel
         if (heroPrevBtn) heroPrevBtn.style.display = 'none';
         if (heroNextBtn) heroNextBtn.style.display = 'none';
-        if (heroImageElement) {
-            heroImageElement.src = 'https://storage.googleapis.com/a1aa/image/6967d3c5-ab07-49c7-2f18-0b4afab4b8e0.jpg';
-            heroImageElement.alt = 'Fine Print Book cover with elegant typography and soft pastel background';
-        }
-    }
-
-    if (productsList && productsScrollLeftBtn && productsScrollRightBtn) {
-        productsScrollLeftBtn.addEventListener('click', () => {
-            productsList.scrollBy({ left: -300, behavior: 'smooth' });
-        });
-        productsScrollRightBtn.addEventListener('click', () => {
-            productsList.scrollBy({ left: 300, behavior: 'smooth' });
-        });
     }
 </script>
 </body>

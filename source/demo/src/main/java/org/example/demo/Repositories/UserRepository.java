@@ -1,6 +1,7 @@
-package org.example.bss.repositories;
+package org.example.demo.Repositories;
 
-import org.example.bss.entities.User;
+
+import org.example.demo.Entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Integer> {

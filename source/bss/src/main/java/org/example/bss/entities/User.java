@@ -1,4 +1,4 @@
-package org.example.bss.entites;
+package org.example.bss.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
